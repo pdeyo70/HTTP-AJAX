@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import CardCont from './CardCont'
+import Card from './Card'
 
 class Friends extends Component {
     constructor(props) {
@@ -16,7 +16,7 @@ class Friends extends Component {
 
     render() {
         return  (<div>
-                    <CardCont index={this.state.id} name={this.state.name} age={this.state.age} email={this.state.email} />
+                    <Card friends={this.state.friends} />
                 </div>)
     }
 }

@@ -1,14 +1,19 @@
-import React from 'react'
+import React from 'react';
+
 
 const Card = (props) => {
     return (
-        <section className='card'>
-            <section className='name'>{props.name}</section>
-            <section className='age'>{props.age}</section>
-            <section className='email'>{props.email}</section>
+        <section>
+        {props.friends.map((friend) => {
+            return (
+            <section className='card'>
+                <p className='name'>{friend.name}</p>
+                <p className='age'>{friend.age}</p>
+                <p className='email'>{friend.email}</p>
+            </section>)
+        })}
         </section>
     )
 }
 
-
-export default Card 
+export default Card
